@@ -1,2 +1,2 @@
 # CNN
-#this is CNN model to find MgII
+this is CNN model to find MgII
