@@ -118,7 +118,7 @@ f_path = "/home/liuhan493/Flase1.npy"
 f_f = np.load(f_path,allow_pickle=True).item()
 f_f = dict(f_f)
 sum_true = 0
-for t_id in range(0,55000):   #len(t_f["list_id"])
+for t_id in range(0,50000):   #len(t_f["list_id"])
     if t_f["QSO_SN"][t_id] > 5:
         if t_f["EW_2796"][t_id] >= 0.3 and t_f["EW_2803"][t_id] >= 0.3:
             x_flux_train.append(t_f["FLUX"][t_id])
@@ -294,7 +294,7 @@ def train(model, criterion_task1, criterion_task2, criterion_task3, criterion_ta
         evaluate1(model,test_loader)
 
 # 训练模型
-#epochs = 10
+#epochs = 2000
 #train(model, criterion_task1,criterion_task2, criterion_task3, optimizer, train_loader, epochs,device)
 
 acc = []
